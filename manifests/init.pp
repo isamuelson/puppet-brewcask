@@ -1,9 +1,9 @@
 class brewcask {
   require homebrew
 
-  homebrew::tap { 'isamuelson/homebrew-cask': }
+  homebrew::tap { 'caskroom/homebrew-cask': }
 
   package { 'brew-cask':
-    require => Homebrew::Tap['isamuelson/homebrew-cask']
+    require => Homebrew::Tap['caskroom/homebrew-cask']
   }
 }
