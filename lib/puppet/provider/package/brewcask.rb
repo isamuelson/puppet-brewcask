@@ -1,4 +1,5 @@
 require "puppet/provider/package"
+Exec { environment => [ "HOMEBREW_CASK_OPTS = --appdir=/Applications --/opt/boxen/homebrew/Caskroom" ] }
 
 Puppet::Type.type(:package).provide :brewcask,
   :parent => Puppet::Provider::Package do
